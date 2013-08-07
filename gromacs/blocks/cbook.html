@@ -8,15 +8,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>gromacs.cbook – Gromacs Cook Book &mdash; GromacsWrapper 0.3.0 documentation</title>
+    <title>gromacs.cbook – Gromacs Cook Book &mdash; GromacsWrapper 0.3.2 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.3.0',
+        VERSION:     '0.3.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,8 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="GromacsWrapper 0.3.0 documentation" href="../../index.html" />
+    <link rel="shortcut icon" href="../../_static/GromacsWrapper_logo_32x32.ico"/>
+    <link rel="top" title="GromacsWrapper 0.3.2 documentation" href="../../index.html" />
     <link rel="up" title="Gromacs building blocks" href="../building_blocks.html" />
     <link rel="next" title="gromacs.setup – Setting up a Gromacs MD run" href="setup.html" />
     <link rel="prev" title="Gromacs building blocks" href="../building_blocks.html" /> 
@@ -46,11 +47,55 @@
         <li class="right" >
           <a href="../building_blocks.html" title="Gromacs building blocks"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">GromacsWrapper 0.3.0 documentation</a> &raquo;</li>
-          <li><a href="../../gromacs.html" >Gromacs package</a> &raquo;</li>
+        <li><a href="../../index.html">GromacsWrapper 0.3.2 documentation</a> &raquo;</li>
+          <li><a href="../../gromacs.html" >GromacsWrapper package</a> &raquo;</li>
           <li><a href="../building_blocks.html" accesskey="U">Gromacs building blocks</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/GromacsWrapper_logo_200x200.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">gromacs.cbook</span></tt> &#8211; Gromacs Cook Book</a><ul>
+<li><a class="reference internal" href="#miscellaneous-canned-gromacs-commands">Miscellaneous canned Gromacs commands</a></li>
+<li><a class="reference internal" href="#manipulating-trajectories-and-structures">Manipulating trajectories and structures</a></li>
+<li><a class="reference internal" href="#processing-output">Processing output</a></li>
+<li><a class="reference internal" href="#working-with-topologies-and-mdp-files">Working with topologies and mdp files</a></li>
+<li><a class="reference internal" href="#working-with-index-files">Working with index files</a></li>
+<li><a class="reference internal" href="#file-editing-functions">File editing functions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../building_blocks.html"
+                        title="previous chapter">Gromacs building blocks</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="setup.html"
+                        title="next chapter"><tt class="docutils literal"><span class="pre">gromacs.setup</span></tt> &#8211; Setting up a Gromacs MD run</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/gromacs/blocks/cbook.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
 
     <div class="document">
       <div class="documentwrapper">
@@ -359,7 +404,7 @@ batch of frames. Increases when iterating.</p>
 
 <dl class="class">
 <dt id="gromacs.cbook.Transformer">
-<em class="property">class </em><tt class="descclassname">gromacs.cbook.</tt><tt class="descname">Transformer</tt><big>(</big><em>s='topol.tpr'</em>, <em>f='traj.xtc'</em>, <em>n=None</em>, <em>force=None</em>, <em>dirname='.'</em><big>)</big><a class="headerlink" href="#gromacs.cbook.Transformer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">gromacs.cbook.</tt><tt class="descname">Transformer</tt><big>(</big><em>s='topol.tpr'</em>, <em>f='traj.xtc'</em>, <em>n=None</em>, <em>force=None</em>, <em>dirname='.'</em>, <em>outdir=None</em><big>)</big><a class="headerlink" href="#gromacs.cbook.Transformer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class to handle transformations of trajectories.</p>
 <ol class="arabic simple">
 <li>Center, compact, and fit to reference structure in tpr
@@ -397,6 +442,14 @@ groups this should contain those groups)</p>
 </ul>
 </dd>
 </dl>
+</dd>
+<dt><em>dirname</em></dt>
+<dd><p class="first last">directory in which all operations are performed, relative paths
+are interpreted relative to <em>dirname</em> [.]</p>
+</dd>
+<dt><em>outdir</em></dt>
+<dd><p class="first last">directory under which output files are placed; by default
+the same directory where the input files live</p>
 </dd>
 </dl>
 </td>
@@ -451,9 +504,13 @@ the new files</p>
 <dt id="gromacs.cbook.Transformer.fit">
 <tt class="descname">fit</tt><big>(</big><em>xy=False</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#gromacs.cbook.Transformer.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write xtc that is fitted to the tpr reference structure.</p>
-<p>See <a class="reference internal" href="#gromacs.cbook.trj_xyfitted" title="gromacs.cbook.trj_xyfitted"><tt class="xref py py-func docutils literal"><span class="pre">gromacs.cbook.trj_xyfitted()</span></tt></a> for details and
-description of <em>kwargs</em>. The most important ones are listed
+<p>Runs <tt class="xref py py-class docutils literal"><span class="pre">gromacs.tools.trjconv</span></tt> with appropriate arguments
+for fitting. The most important <em>kwargs</em> are listed
 here but in most cases the defaults should work.</p>
+<p>Note that the default settings do <em>not</em> include centering or
+periodic boundary treatment as this often does not work well
+with fitting. It is better to do this as a separate step (see
+<a class="reference internal" href="#gromacs.cbook.Transformer.center_fit" title="gromacs.cbook.Transformer.center_fit"><tt class="xref py py-meth docutils literal"><span class="pre">center_fit()</span></tt></a> or <a class="reference internal" href="#gromacs.cbook.trj_fitandcenter" title="gromacs.cbook.trj_fitandcenter"><tt class="xref py py-func docutils literal"><span class="pre">gromacs.cbook.trj_fitandcenter()</span></tt></a>)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -483,6 +540,9 @@ If e.g. <em>dt</em> = 100  is one of the <em>kwargs</em> then the default name i
 <dd><p class="first last"><tt class="docutils literal"><span class="pre">True</span></tt>: overwrite existing trajectories
 <tt class="docutils literal"><span class="pre">False</span></tt>: throw a IOError exception
 <tt class="docutils literal"><span class="pre">None</span></tt>: skip existing and log a warning [default]</p>
+</dd>
+<dt><em>fitgroup</em></dt>
+<dd><p class="first last">index group to fit on [&#8220;backbone&#8221;]</p>
 </dd>
 <dt><em>kwargs</em></dt>
 <dd><p class="first last">kwargs are passed to <a class="reference internal" href="#gromacs.cbook.trj_xyfitted" title="gromacs.cbook.trj_xyfitted"><tt class="xref py py-func docutils literal"><span class="pre">trj_xyfitted()</span></tt></a></p>
@@ -560,6 +620,14 @@ otherwise Gromacs will throw a hissy-fit and say</p>
 missing</em></p>
 <p class="last">(This appears to be a bug in Gromacs 4.x.)</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="gromacs.cbook.Transformer.outfile">
+<tt class="descname">outfile</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#gromacs.cbook.Transformer.outfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path for an output file.</p>
+<p>If <tt class="xref py py-attr docutils literal"><span class="pre">outdir</span></tt> is set then the path is
+<tt class="docutils literal"><span class="pre">outdir/basename(p)</span></tt> else just <tt class="docutils literal"><span class="pre">p</span></tt></p>
 </dd></dl>
 
 <dl class="method">
@@ -694,7 +762,7 @@ the output format changes. This version recognizes lines like</p>
 </pre></div>
 </div>
 <p>using the regular expression
-<tt class="regexp docutils literal"><span class="pre">System</span> <span class="pre">has</span> <span class="pre">non-zero</span> <span class="pre">total</span> <span class="pre">charge:</span> <span class="pre">*(?P&lt;qtot&gt;[-+]?d*.d+[eE][-+]d+)</span></tt>.</p>
+<tt class="regexp docutils literal"><span class="pre">System</span> <span class="pre">has</span> <span class="pre">non-zero</span> <span class="pre">total</span> <span class="pre">charge:</span> <span class="pre">*(?P&lt;qtot&gt;[-+]?d*.d+([eE][-+]d+)?)</span></tt>.</p>
 </li>
 </ul>
 </dd></dl>
@@ -946,7 +1014,7 @@ the output format changes. This version recognizes lines like</p>
 </pre></div>
 </div>
 <p>using the regular expression
-<tt class="regexp docutils literal"><span class="pre">System</span> <span class="pre">has</span> <span class="pre">non-zero</span> <span class="pre">total</span> <span class="pre">charge:</span> <span class="pre">*(?P&lt;qtot&gt;[-+]?d*.d+[eE][-+]d+)</span></tt>.</p>
+<tt class="regexp docutils literal"><span class="pre">System</span> <span class="pre">has</span> <span class="pre">non-zero</span> <span class="pre">total</span> <span class="pre">charge:</span> <span class="pre">*(?P&lt;qtot&gt;[-+]?d*.d+([eE][-+]d+)?)</span></tt>.</p>
 </li>
 </ul>
 </dd></dl>
@@ -1021,16 +1089,17 @@ could be.</p>
 <p>If selections and a structure file are supplied then the individual
 selections are constructed with separate calls to
 <tt class="xref py py-func docutils literal"><span class="pre">gromacs.make_ndx()</span></tt>. Use <a class="reference internal" href="#gromacs.cbook.IndexBuilder.combine" title="gromacs.cbook.IndexBuilder.combine"><tt class="xref py py-meth docutils literal"><span class="pre">IndexBuilder.combine()</span></tt></a> to combine
-them into a joint selection.</p>
+them into a joint selection or <tt class="xref py py-meth docutils literal"><span class="pre">IndexBuilder.write()</span></tt> to simply write
+out the individual named selections (useful with <em>names</em>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Arguments :</th><td class="field-body"><dl class="first last docutils">
-<dt>struct <span class="classifier-delimiter">:</span> <span class="classifier">filename</span></dt>
+<dt><em>struct</em> <span class="classifier-delimiter">:</span> <span class="classifier">filename</span></dt>
 <dd><p class="first last">Structure file (tpr, pdb, ...)</p>
 </dd>
-<dt>selections <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dt><em>selections</em> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
 <dd><p class="first">The list must contain strings or tuples, which must be be one of
 the following constructs:</p>
 <blockquote class="last">
@@ -1058,19 +1127,23 @@ or <tt class="docutils literal"><span class="pre">&quot;&#64;r</span> <span clas
 </div></blockquote>
 </div></blockquote>
 </dd>
-<dt>names <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dt><em>names</em> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
 <dd><p class="first last">Strings to name the selections; if not supplied or if individuals
-are <tt class="docutils literal"><span class="pre">None</span></tt> then a default name is created.</p>
+are <tt class="docutils literal"><span class="pre">None</span></tt> then a default name is created. When simply using
+<tt class="xref py py-meth docutils literal"><span class="pre">IndexBuilder.write()</span></tt> then these should be supplied.</p>
 </dd>
-<dt>offset <span class="classifier-delimiter">:</span> <span class="classifier">int, dict</span></dt>
+<dt><em>name_all</em> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">Name of the group that is generated by <a class="reference internal" href="#gromacs.cbook.IndexBuilder.combine" title="gromacs.cbook.IndexBuilder.combine"><tt class="xref py py-meth docutils literal"><span class="pre">IndexBuilder.combine()</span></tt></a>.</p>
+</dd>
+<dt><em>offset</em> <span class="classifier-delimiter">:</span> <span class="classifier">int, dict</span></dt>
 <dd><p class="first last">This number is added to the resids in the first selection scheme; this
 allows names to be the same as in a crystal structure. If offset is a
 dict then it is used to directly look up the resids.</p>
 </dd>
-<dt>ndx <span class="classifier-delimiter">:</span> <span class="classifier">filename or list of filenames</span></dt>
+<dt><em>ndx</em> <span class="classifier-delimiter">:</span> <span class="classifier">filename or list of filenames</span></dt>
 <dd><p class="first last">Optional input index file(s).</p>
 </dd>
-<dt>out_ndx <span class="classifier-delimiter">:</span> <span class="classifier">filename</span></dt>
+<dt><em>out_ndx</em> <span class="classifier-delimiter">:</span> <span class="classifier">filename</span></dt>
 <dd><p class="first last">Output index file.</p>
 </dd>
 </dl>
@@ -1097,7 +1170,9 @@ constructor is used. [<tt class="docutils literal"><span class="pre">None</span>
 </dd>
 <dt>operation <span class="classifier-delimiter">:</span> <span class="classifier">character</span></dt>
 <dd><p class="first last">Logical operation that is used to generate the combined group from
-the individual groups: &#8220;|&#8221; (OR) or &#8220;&amp;&#8221; (AND) [&#8220;|&#8221;]</p>
+the individual groups: &#8220;|&#8221; (OR) or &#8220;&amp;&#8221; (AND); if set to <tt class="docutils literal"><span class="pre">False</span></tt>
+then no combined group is created and only the individual groups
+are written. [&#8220;|&#8221;]</p>
 </dd>
 <dt>defaultgroups <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd><p class="first last"><tt class="docutils literal"><span class="pre">True</span></tt>: append everything to the default groups produced by
@@ -1121,6 +1196,10 @@ actual group name and the name of the file; useful when all names are autogenera
 <tt class="docutils literal"><span class="pre">make_ndx</span></tt> sorts them ascending. Thus you should be careful when
 using these index files for calculations of angles and dihedrals.
 Use <tt class="xref py py-class docutils literal"><span class="pre">gromacs.formats.NDX</span></tt> in these cases.</p>
+</div>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-meth docutils literal"><span class="pre">IndexBuilder.write()</span></tt>.</p>
 </div>
 </dd></dl>
 
@@ -1362,47 +1441,6 @@ empty string or similar.</li>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">gromacs.cbook</span></tt> &#8211; Gromacs Cook Book</a><ul>
-<li><a class="reference internal" href="#miscellaneous-canned-gromacs-commands">Miscellaneous canned Gromacs commands</a></li>
-<li><a class="reference internal" href="#manipulating-trajectories-and-structures">Manipulating trajectories and structures</a></li>
-<li><a class="reference internal" href="#processing-output">Processing output</a></li>
-<li><a class="reference internal" href="#working-with-topologies-and-mdp-files">Working with topologies and mdp files</a></li>
-<li><a class="reference internal" href="#working-with-index-files">Working with index files</a></li>
-<li><a class="reference internal" href="#file-editing-functions">File editing functions</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../building_blocks.html"
-                        title="previous chapter">Gromacs building blocks</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="setup.html"
-                        title="next chapter"><tt class="docutils literal"><span class="pre">gromacs.setup</span></tt> &#8211; Setting up a Gromacs MD run</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/gromacs/blocks/cbook.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -1420,15 +1458,15 @@ empty string or similar.</li>
         <li class="right" >
           <a href="../building_blocks.html" title="Gromacs building blocks"
              >previous</a> |</li>
-        <li><a href="../../index.html">GromacsWrapper 0.3.0 documentation</a> &raquo;</li>
-          <li><a href="../../gromacs.html" >Gromacs package</a> &raquo;</li>
+        <li><a href="../../index.html">GromacsWrapper 0.3.2 documentation</a> &raquo;</li>
+          <li><a href="../../gromacs.html" >GromacsWrapper package</a> &raquo;</li>
           <li><a href="../building_blocks.html" >Gromacs building blocks</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2009-2011, Oliver Beckstein.
-      Last updated on Apr 24, 2012.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+        &copy; Copyright 2009-2012, Oliver Beckstein, Jan Domański.
+      Last updated on Aug 07, 2013.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
 </html>

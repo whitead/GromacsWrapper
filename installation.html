@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>staging — Staging of input/output files on a queuing system &mdash; GromacsWrapper 0.3.2 documentation</title>
+    <title>Installation &mdash; GromacsWrapper 0.3.2 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -27,9 +27,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/GromacsWrapper_logo_32x32.ico"/>
     <link rel="top" title="GromacsWrapper 0.3.2 documentation" href="index.html" />
-    <link rel="up" title="Auxiliary modules" href="auxiliary.html" />
-    <link rel="next" title="staging — Staging module overview" href="staging/init.html" />
-    <link rel="prev" title="vmd — Remote Tcl commands in VMD" href="vmd.html" /> 
+    <link rel="next" title="README: GromacsWrapper" href="README.html" />
+    <link rel="prev" title="GromacsWrapper — a python framework for Gromacs" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -42,13 +41,12 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="staging/init.html" title="staging — Staging module overview"
+          <a href="README.html" title="README: GromacsWrapper"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="vmd.html" title="vmd — Remote Tcl commands in VMD"
+          <a href="index.html" title="GromacsWrapper — a python framework for Gromacs"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">GromacsWrapper 0.3.2 documentation</a> &raquo;</li>
-          <li><a href="auxiliary.html" accesskey="U">Auxiliary modules</a> &raquo;</li> 
+        <li><a href="index.html">GromacsWrapper 0.3.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -57,14 +55,14 @@
               <img class="logo" src="_static/GromacsWrapper_logo_200x200.png" alt="Logo"/>
             </a></p>
   <h4>Previous topic</h4>
-  <p class="topless"><a href="vmd.html"
-                        title="previous chapter"><tt class="docutils literal docutils literal"><span class="pre">vmd</span></tt> &#8212; Remote Tcl commands in VMD</a></p>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">GromacsWrapper &#8212; a python framework for Gromacs</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="staging/init.html"
-                        title="next chapter"><tt class="docutils literal"><span class="pre">staging</span></tt> &#8212; Staging module overview</a></p>
+  <p class="topless"><a href="README.html"
+                        title="next chapter">README: GromacsWrapper</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/staging.txt"
+    <li><a href="_sources/installation.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -88,20 +86,34 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="staging-staging-of-input-output-files-on-a-queuing-system">
-<h1><a class="reference internal" href="staging/init.html#module-staging" title="staging"><tt class="xref py py-mod docutils literal"><span class="pre">staging</span></tt></a> &#8212; Staging of input/output files on a queuing system<a class="headerlink" href="#staging-staging-of-input-output-files-on-a-queuing-system" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference internal" href="staging/init.html#module-staging" title="staging"><tt class="xref py py-mod docutils literal"><span class="pre">staging</span></tt></a> module provides a framework to run python scripts
-easily through a queuing system that requires copying of files to the
-scratch directory on compute nodes (&#8220;staging&#8221;). Instead of submitting
-a shell script to the queuing system, one uses a python script that
-imports the module and instantiates a
-<a class="reference internal" href="staging/SunGridEngine.html#staging.SunGridEngine.Job" title="staging.SunGridEngine.Job"><tt class="xref py py-class docutils literal"><span class="pre">Job</span></tt></a> class that contains methods to
-manage staging.</p>
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>The package contains two files, README and INSTALL, which should get you
+started quickly.</p>
+<p>If everything works perfectly then you might be able to install a
+working version of <em>GromacsWrapper</em> with a simple</p>
+<div class="highlight-python"><pre>python setup.py install</pre>
+</div>
+<p>from the unpacked sources.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="staging/init.html"><tt class="docutils literal"><span class="pre">staging</span></tt> &#8212; Staging module overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="staging/SunGridEngine.html"><tt class="docutils literal"><span class="pre">staging.SunGridEngine</span></tt> &#8212; staging class for SunGridEngine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="staging/Local.html"><tt class="docutils literal"><span class="pre">staging.Local</span></tt> &#8212; staging class for running local jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">README: GromacsWrapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="README.html#licence">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#included-software">Included Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#citing">Citing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#download-and-availability">Download and Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#contact">Contact</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="INSTALL.html">INSTALL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#quick-installation-instructions">Quick installation instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#manual-download">Manual Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#source-code-access">Source code access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#additional-instructions">Additional instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="INSTALL.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -122,13 +134,12 @@ manage staging.</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="staging/init.html" title="staging — Staging module overview"
+          <a href="README.html" title="README: GromacsWrapper"
              >next</a> |</li>
         <li class="right" >
-          <a href="vmd.html" title="vmd — Remote Tcl commands in VMD"
+          <a href="index.html" title="GromacsWrapper — a python framework for Gromacs"
              >previous</a> |</li>
-        <li><a href="index.html">GromacsWrapper 0.3.2 documentation</a> &raquo;</li>
-          <li><a href="auxiliary.html" >Auxiliary modules</a> &raquo;</li> 
+        <li><a href="index.html">GromacsWrapper 0.3.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
