@@ -684,9 +684,10 @@ def add_mdp_includes(topology=None, kwargs=None):
 
     include_dirs = ['.', '..']      # should . & .. always be added?
     if topology is not None:
-        # half-hack: find additional itps in the same directory as the topology
-        topology_dir = os.path.dirname(topology)
-        include_dirs.append(topology_dir)
+        # Add directory, if present, of topology file to find additional itps in the same directory
+        topology_dir = os.path.dirname(topology)        
+        if topology_dir: #checks if non-empty
+            include_dirs.append(topology_dir)
 
     include_dirs.extend(asiterable(kwargs.pop('includes', [])))  # includes can be a list or a string
 
@@ -750,8 +751,8 @@ def create_portable_topology(topol, struct, **kwargs):
         grompp_kwargs['pp'] = processed
         grompp_kwargs['f'] =  mdp.name
         grompp_kwargs['c'] = struct
-        grompp_kwargs['v'] = False
         try:
+            print(grompp_kwargs)
             gromacs.grompp(**grompp_kwargs)
         finally:
             utilities.unlink_gmx('topol.tpr', 'mdout.mdp')
